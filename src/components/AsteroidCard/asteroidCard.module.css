@@ -1,0 +1,89 @@
+.cardWrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 8px;
+}
+
+.cardDate {
+	font-size: 2.4rem;
+	font-weight: 700;
+	line-height: 133%;
+}
+
+.asteroid {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.asteroidDistance {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 8px;
+}
+
+.distanceText {
+	font-size: 1.6rem;
+}
+
+.asteroidInfo {
+	display: flex;
+	flex-direction: column;
+}
+
+.asteroidName {
+	font-size: 1.6rem;
+	font-weight: 700;
+}
+
+.asteroidSize {
+	font-size: 1.2rem;
+	line-height: 133%;
+}
+
+.cardControls {
+	display: flex;
+	align-items: flex-start;
+	gap: 10px;
+}
+
+.cardButton {
+	font-size: 1.1rem;
+	flex-shrink: 0;
+	display: flex;
+	align-items: center;
+	height: 20px;
+	line-height: 20px;
+	padding: 2px 11px;
+	border-radius: 16px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: var(--base-orange);
+	background-color: var(--smooth-orange);
+	transition: 0.2s ease-in;
+}
+
+.cardButton:hover {
+	color: var(--text-primary);
+	background-color: var(--base-orange);
+}
+
+.danger {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	gap: 4px;
+	font-size: 1.4rem;
+	color: #e3e5e5;
+}
+
+.isInCart {
+	color: var(--text-secondary);
+}
+
+.isInCart:hover {
+	color: var(--text-secondary);
+	background-color: var(--smooth-orange);
+}

@@ -1,0 +1,8 @@
+.asteroidsListWrapper {
+	min-height: 80vh;
+	display: grid;
+	grid-template-columns: minmax(279px, 402px);
+	grid-auto-rows: max-content;
+	gap: 24px 0;
+	padding-bottom: 16px;
+}

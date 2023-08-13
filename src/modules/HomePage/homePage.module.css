@@ -1,0 +1,14 @@
+.main {
+	padding: 0 24px 0 72px;
+	margin-top: 15px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	gap: 5em;
+}
+
+.mainWrapper {
+	width: 100%;
+	position: relative;
+}
