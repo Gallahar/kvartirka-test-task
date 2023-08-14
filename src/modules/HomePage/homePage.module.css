@@ -12,3 +12,13 @@
 	width: 100%;
 	position: relative;
 }
+
+.loaderPos {
+	margin-left: 20%;
+}
+
+@media (max-width: 500px) {
+	.loaderPos {
+		margin-bottom: 70px;
+	}
+}

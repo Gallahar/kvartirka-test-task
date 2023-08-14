@@ -1,0 +1,24 @@
+.cardWrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	font-size: 2rem;
+	line-height: 120%;
+}
+
+.date {
+	line-height: 150%;
+	font-size: 3rem;
+}
+
+.cardWrapper span {
+	font-weight: 700;
+}
+
+.distance {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-end;
+	line-height: normal;
+	gap: 0 10px;
+}

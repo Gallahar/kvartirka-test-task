@@ -1,9 +1,10 @@
 import { baseAxios, clientAxios } from '@/api'
 import { ApiResponse } from '@/models/apiResponse.interface'
+import { Asteroid } from '@/models/asteroid.interface'
 import { AxiosResponse } from 'axios'
 
 export const asteroidService = {
-	async getById(id: string) {
+	async getById(id: string): Promise<AxiosResponse<Asteroid>> {
 		return await baseAxios.get(`/neo/${id}`)
 	},
 	async getPortionServer(

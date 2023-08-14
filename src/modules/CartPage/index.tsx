@@ -2,8 +2,10 @@
 
 import { useMainContext } from '@/lib/hooks/useMainContext'
 import s from './cartPage.module.css'
-import { AsteroidsList } from '@/components/AsteroidsList'
+import { ListWrapper } from '@/components/ListWrapper'
 import { ActionLink } from '@/ui/Buttons/ActionButton/ActionLink'
+import { ListHeading } from '@/components/ListHeading'
+import { AsteroidCard } from '@/components/AsteroidCard'
 
 export const CartPage = () => {
 	const { cartProducts } = useMainContext()
@@ -13,10 +15,15 @@ export const CartPage = () => {
 			<ActionLink className={s.link} href='/'>
 				Вернуться на главную
 			</ActionLink>
-			<AsteroidsList
-				asteroids={[...cartProducts.values()]}
-				listTitle={cartProducts.size ? 'Заказ отправлен!' : 'Корзина пуста'}
-			/>
+			<ListWrapper>
+				<ListHeading
+					title={cartProducts.size ? 'Заказ отправлен!' : 'Корзина пуста'}
+				/>
+				{[...cartProducts.values()].map((product) => (
+					<AsteroidCard key={product.id} asteroid={product} />
+				))}
+			</ListWrapper>
+
 			<p className={s.copyright}>© Все права и планеты защищены</p>
 		</main>
 	)

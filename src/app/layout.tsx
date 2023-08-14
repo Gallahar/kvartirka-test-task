@@ -30,7 +30,7 @@ export default async function RootLayout({
 		<html lang='en'>
 			<body>
 				<Header className={passionOne.className} />
-				<MainProvider initialDate={today} apiResponse={data}>
+				<MainProvider initialDate={data.links.next ?? ''}>
 					{children}
 				</MainProvider>
 			</body>

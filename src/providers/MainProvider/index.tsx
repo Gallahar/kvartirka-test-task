@@ -1,13 +1,13 @@
 'use client'
 
-import { ApiResponse } from '@/models/apiResponse.interface'
 import { createContext, FC, ReactNode, useEffect, useState } from 'react'
 import { mainContextInitialValue } from './mainProviderData'
-import { MainContextProps } from './mainProviderInterface'
+import { DistanceType, MainContextProps } from './mainProviderInterface'
 import { getNextDateFromUrl } from '@/lib/utils/getNextDateFromUrl'
 import { asteroidService } from '@/services/asteroidService'
 import { Asteroid } from '@/models/asteroid.interface'
 import { usePathname } from 'next/navigation'
+
 
 export const MainContext = createContext<MainContextProps>(
 	mainContextInitialValue
@@ -15,16 +15,16 @@ export const MainContext = createContext<MainContextProps>(
 
 interface SectionProviderProps {
 	children: ReactNode
-	apiResponse: ApiResponse
 	initialDate: string
 }
 
 export const MainProvider: FC<SectionProviderProps> = ({
 	children,
-	apiResponse,
 	initialDate,
 }) => {
 	const pathName = usePathname()
+
+    const [distanceType,setDistanceType] = useState<DistanceType>('km')
 
 	const [cartProducts, setCartProducts] = useState<Map<string, Asteroid>>(
 		new Map()
@@ -32,12 +32,8 @@ export const MainProvider: FC<SectionProviderProps> = ({
 
 	const [isFetching, setIsFetching] = useState(false)
 
-	const [nextDate, setNextDate] = useState(
-		getNextDateFromUrl(apiResponse.links.next ?? '')
-	)
-	const [asteroids, setAsteroids] = useState(
-		apiResponse.near_earth_objects[initialDate]
-	)
+	const [nextDate, setNextDate] = useState(getNextDateFromUrl(initialDate))
+	const [asteroids, setAsteroids] = useState<Asteroid[]>([])
 
 	const addProductToCart = (product: Asteroid) => {
 		setCartProducts(
@@ -46,7 +42,7 @@ export const MainProvider: FC<SectionProviderProps> = ({
 	}
 
 	const getNextPortion = async () => {
-		if (!apiResponse.links.next || !nextDate || isFetching) return
+		if (!nextDate || isFetching) return
 
 		try {
 			setIsFetching(true)
@@ -85,6 +81,9 @@ export const MainProvider: FC<SectionProviderProps> = ({
 	return (
 		<MainContext.Provider
 			value={{
+                distanceType,
+                setDistanceType,
+                isFetching,
 				asteroids,
 				cartProducts,
 				addProductToCart,

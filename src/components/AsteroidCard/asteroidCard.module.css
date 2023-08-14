@@ -17,17 +17,6 @@
 	gap: 8px;
 }
 
-.asteroidDistance {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	gap: 8px;
-}
-
-.distanceText {
-	font-size: 1.6rem;
-}
-
 .asteroidInfo {
 	display: flex;
 	flex-direction: column;
@@ -36,6 +25,7 @@
 .asteroidName {
 	font-size: 1.6rem;
 	font-weight: 700;
+    line-height: 150%;
 }
 
 .asteroidSize {
@@ -70,6 +60,13 @@
 	background-color: var(--base-orange);
 }
 
+.cardButton:disabled {
+	color: var(--text-secondary);
+}
+.cardButton:disabled:hover {
+	background-color: var(--smooth-orange);
+}
+
 .danger {
 	display: flex;
 	justify-content: center;
@@ -77,13 +74,4 @@
 	gap: 4px;
 	font-size: 1.4rem;
 	color: #e3e5e5;
-}
-
-.isInCart {
-	color: var(--text-secondary);
-}
-
-.isInCart:hover {
-	color: var(--text-secondary);
-	background-color: var(--smooth-orange);
 }

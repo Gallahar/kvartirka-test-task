@@ -35,12 +35,38 @@ body {
 	font-weight: 400;
 	color: var(--text-primary);
 	background-color: var(--bg-primary);
+
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	background-image: url('../images/planeta_zemlia_kosmos_167499_2560x1600 1.png');
+	background-image: url('../images/planetLg.png');
 	background-position: left 100px;
 	overflow-x: hidden;
 	min-height: 100vh;
+}
+
+@media (max-width: 1200px) {
+	body {
+		background-position: -30% 100px;
+	}
+}
+
+@media (max-width: 899px) {
+	body {
+		background-position: -60% 100px;
+	}
+}
+
+@media (max-width: 768px) {
+	body {
+		background-position: -300px 100px;
+	}
+}
+
+@media (max-width: 600px) {
+	body {
+		background-image: url('../images/bg-md.png');
+		background-position: -250px 100px;
+	}
 }
 
 *,

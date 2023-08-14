@@ -1,0 +1,10 @@
+.asteroidDistance {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.distanceText {
+	font-size: 1.6rem;
+	line-height: 150%;
+}
