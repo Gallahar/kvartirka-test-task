@@ -24,6 +24,7 @@ yarn install / npm install / npm i
 
 ```
 yarn dev  / npm run dev
+```
 
 <p>4. Создайте prod билд</p>
 
