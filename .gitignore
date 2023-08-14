@@ -36,7 +36,3 @@ next-env.d.ts
 
 #yarn
 yarn.lock
-
-
-# env
-.env

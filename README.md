@@ -1,34 +1,38 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## 
 
-## Getting Started
 
-First, run the development server:
+<h2>🚀 Демо</h2>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+[https://armageddon2023.vercel.app/](https://armageddon2023.vercel.app/)
+
+
+<h2>🛠️ Установка:</h2>
+
+<p>1. Клонируйте этот репозиторий</p>
+
+```
+git clone repo_url
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<p>2. Установите зависимости</p>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+yarn install / npm install / npm i
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+<p>3. Запустите сервер разработки с помощью следующей команды</p>
 
-## Learn More
+```
+yarn dev  / npm run dev
 
-To learn more about Next.js, take a look at the following resources:
+<p>4. Создайте prod билд</p>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+yarn build / npm run build
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+<p>5. Проверка prod билда локально</p>
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```
+yarn start / npm run start
+```
