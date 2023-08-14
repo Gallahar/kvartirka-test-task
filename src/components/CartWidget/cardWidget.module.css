@@ -35,7 +35,8 @@
 		max-width: 100%;
 		max-height: 81px;
 		border-radius: 0;
-		top: 91%;
+		top: unset;
+		bottom: 0;
 		left: 0;
 	}
 }
